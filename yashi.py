@@ -25,4 +25,11 @@ print("Total Amount:", amount)
 # Square root of the given no.
 num = int(input("Enter the no. to calculate the square root"))
 sr = math.sqrt(num)
+srmathformula = num ** (1 / 2)
 print("square root of the given no. is: ", sr)
+
+# Find the area of the triangle -
+base = int(input("Enter the base of the triangle"))
+height = int(input("Enter the Height of the Triangle"))
+area = (1 / 2) * base * height
+print("area of the triangle is : ", area)
