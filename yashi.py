@@ -33,3 +33,17 @@ base = int(input("Enter the base of the triangle"))
 height = int(input("Enter the Height of the Triangle"))
 area = (1 / 2) * base * height
 print("area of the triangle is : ", area)
+
+# swap Two no.
+x = 13
+y = 10
+
+# swapping
+temp = x
+x = y
+y = temp
+
+# shortcut of swapping
+x, y = y, x
+
+print(x, y)
