@@ -1,49 +1,108 @@
 import math
 
-# Add two no.
-num1 = float(input("enter the first no."))
-num2 = float(input("enter 2nd no."))
-sum = num1 + num2
-print("the sum of given no. is: ", sum)
 
-# Calculate area of rectangle
-length = int(input("Enter the length of rectangle: "))
-breadth = int(input("Enter the breadth of rectangle: "))
-area = length * breadth
-print(area)
+# 1. Add two numbers
+def add_two_numbers():
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+
+    total = num1 + num2
+
+    print("The sum of the given numbers is:", total)
 
 
-# interest calculator
-principle = int(input("Enter the principal amount: "))
-rate = int(input("Enter the rate of interest: "))
-time = int(input("Enter the time period: "))
-simple_interest = (principle * rate * time) / 100
-amount = principle + simple_interest
-print("Simple Interest:", simple_interest)
-print("Total Amount:", amount)
+# 2. Calculate area of rectangle
+def area_of_rectangle():
+    length = float(input("Enter the length of the rectangle: "))
+    breadth = float(input("Enter the breadth of the rectangle: "))
 
-# Square root of the given no.
-num = int(input("Enter the no. to calculate the square root"))
-sr = math.sqrt(num)
-srmathformula = num ** (1 / 2)
-print("square root of the given no. is: ", sr)
+    area = length * breadth
 
-# Find the area of the triangle -
-base = int(input("Enter the base of the triangle"))
-height = int(input("Enter the Height of the Triangle"))
-area = (1 / 2) * base * height
-print("area of the triangle is : ", area)
+    print("The area of the rectangle is:", area)
 
-# swap Two no.
-x = 13
-y = 10
 
-# swapping
-temp = x
-x = y
-y = temp
+# 3. Calculate Simple Interest
+def calculate_simple_interest():
+    principal = float(input("Enter the principal amount: "))
+    rate = float(input("Enter the rate of interest: "))
+    time = float(input("Enter the time period: "))
 
-# shortcut of swapping
-x, y = y, x
+    simple_interest = (principal * rate * time) / 100
+    amount = principal + simple_interest
 
-print(x, y)
+    print("Simple Interest:", simple_interest)
+    print("Total Amount:", amount)
+
+
+# 4. Calculate square root
+def calculate_square_root():
+    num = float(input("Enter the number to calculate the square root: "))
+
+    square_root = math.sqrt(num)
+
+    print("The square root of the given number is:", square_root)
+
+
+# 5. Calculate area of triangle
+def area_of_triangle():
+    base = float(input("Enter the base of the triangle: "))
+    height = float(input("Enter the height of the triangle: "))
+
+    area = (1 / 2) * base * height
+
+    print("The area of the triangle is:", area)
+
+
+# 6. Swap two numbers
+def swap_two_numbers():
+    x = 13
+    y = 10
+
+    print("Before swapping:")
+    print("x =", x)
+    print("y =", y)
+
+    # Python's shortcut for swapping
+    x, y = y, x
+
+    print("After swapping:")
+    print("x =", x)
+    print("y =", y)
+
+
+# 7. Check if number is Odd or Even
+def check_odd_even():
+    num = int(input("Enter a number: "))
+
+    if num % 2 == 0:
+        print(num, "is Even")
+    else:
+        print(num, "is Odd")
+
+
+# Main function
+def main():
+    add_two_numbers()
+    print()
+
+    area_of_rectangle()
+    print()
+
+    calculate_simple_interest()
+    print()
+
+    calculate_square_root()
+    print()
+
+    area_of_triangle()
+    print()
+
+    swap_two_numbers()
+    print()
+
+    check_odd_even()
+
+
+# Call the main function
+if __name__ == "__main__":
+    main()
